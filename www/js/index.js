@@ -48,7 +48,7 @@ function checkGuess()
   if(guessCount == 8) 
   {
     lastResult.innerHTML = "You haven't guessed it in 8 tries. The number was " + randomNumber;
-	navigator.vibrate(1000);
+ navigator.vibrate(1000);
     disableForm();
   } 
   else 
@@ -57,7 +57,7 @@ function checkGuess()
     if(userGuess == randomNumber) 
     {
       lastResult.innerHTML = "Congratulations! You got it right! " + guessCount + " tries required.";
-	  playSound("sound.mp3");
+   playSound("sound.mp3");
       hint.innerHTML = "";
       record.innerHTML = guessCount;
       disableForm();
@@ -68,12 +68,12 @@ function checkGuess()
       if((userGuess < randomNumber) && (flip.value == "On"))
       {
         hint.innerHTML = "Your guess is too low!";
-		navigator.vibrate(1000);
+  navigator.vibrate(1000);
       } 
       else if((userGuess > randomNumber) && (flip.value == "On")) 
       {
         hint.innerHTML = "Your guess is too high!";
-		navigator.vibrate(1000);
+  navigator.vibrate(1000);
       }
     }
     guessCount++;
@@ -107,5 +107,3 @@ function enableForm()
 setDifficulty.onclick = setDifficultyF;
 guessSubmit.onclick = checkGuess;
 again.onclick = goAgain;
-
- 
