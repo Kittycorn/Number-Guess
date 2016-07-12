@@ -22,6 +22,7 @@
 	
 	
 	<plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb" />
+	<plugin name="com.dooble.audiotoggle" spec="1.0.0" source="pgb" />
 	
 	
 </widget>
