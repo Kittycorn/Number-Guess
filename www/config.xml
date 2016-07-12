@@ -19,4 +19,9 @@
     <preference name="permissions"                value="none"/>   
 	
 	<access origin="*"/>
+	
+	
+	<plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb" />
+	
+	
 </widget>
