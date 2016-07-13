@@ -57,10 +57,11 @@ function checkGuess()
     if(userGuess == randomNumber) 
     {
       lastResult.innerHTML = "Congratulations! You got it right! " + guessCount + " tries required.";
+      disableForm();
    playSound("sound.mp3");
       hint.innerHTML = "";
       record.innerHTML = guessCount;
-      disableForm();
+      
     } 
     else 
     {
