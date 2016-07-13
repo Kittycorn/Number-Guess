@@ -14,8 +14,6 @@ var flip = document.getElementById("flip");
 var hint = document.getElementById("hint");
 var guessCount = 1;
 
-var record = document.getElementById("record");
-
 function setDifficultyF()
 {
 switch(Number(difficultyField.value))
@@ -60,8 +58,6 @@ function checkGuess()
       disableForm();
    playSound("sound.mp3");
       hint.innerHTML = "";
-      record.innerHTML = guessCount;
-      
     } 
     else 
     {
