@@ -56,8 +56,10 @@ function checkGuess()
     {
       lastResult.innerHTML = "Congratulations! You got it right! " + guessCount + " tries required.";
       disableForm();
-   playSound("sound.mp3");
       hint.innerHTML = "";
+      difficulty.innerHTML = "";
+   playSound("sound.mp3");
+      
     } 
     else 
     {
@@ -80,6 +82,9 @@ function checkGuess()
 function goAgain()
 {
   enableForm();
+  hint.innerHTML = "";
+  lastResult.innerHTML = "";
+  difficulty.innerHTML = "Please choose a difficulty!";
   setDifficultyF();
   guessCount = 1;
 }
