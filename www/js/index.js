@@ -42,6 +42,8 @@ switch(Number(difficultyField.value))
 
 function checkGuess() 
 {
+ if ((difficultyField.value = 1) || (difficultyField.value = 2) ||(difficultyField.value = 3))
+ {
   var userGuess = Number(guessField.value);
   if(guessCount == 8) 
   {
@@ -78,6 +80,9 @@ function checkGuess()
     guessCount++;
     guessField.value = "";
   }
+ }
+ else 
+ difficulty.innerHTML = "Please choose a difficulty!";
 }
 function goAgain()
 {
