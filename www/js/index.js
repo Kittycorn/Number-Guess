@@ -58,9 +58,7 @@ function checkGuess()
       disableForm();
       hint.innerHTML = "";
       difficulty.innerHTML = "";
-      navigator.vibrate(500);
-      navigator.vibrate(500);
-      navigator.vibrate(500);
+      navigator.vibrate([500, 0, 500, 0, 500]);
       
     } 
     else 
