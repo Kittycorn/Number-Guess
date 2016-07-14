@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+// Uses jQuery functions from the folder js
 <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css">
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -9,21 +10,29 @@
 </head>
 <body>
 
+// Crates the first page, which is also the main page
 <div data-role="page" id="pageone">
+  // Creates the panel from the right of the screen, name it myPanel for further reference
   <div data-role="panel" data-position="right" id="myPanel">
     <h2>Menu</h2>
+    // Difficulty tab for the game with a blank for input a number
     <label for="difficultyField">Choose the difficulty between 1, 2 and 3. </label><input type="number" id="difficultyField">
+    // Button to set the difficulty
     <button id="setDifficulty">Set difficulty</button>
+    // Detailed difficulty stages
     <pre><b>1 -</b> between 1 and 10
 <b>2 -</b> between 1 and 100
 <b>3 -</b> between 1 and 1000
 <form>
-    <label for="flip"> <h2>Hints</h2></label>
-    <select id="flip" name="flip-select" data-role="flipswitch">
-        <option>Off</option>
-        <option selected="">On</option>
-    </select>
+  // Creates an On and Off button for the Hints tab
+<label for="flip"> <h2>Hints</h2></label>
+<select id="flip" name="flip-select" data-role="flipswitch">
+<option>Off</option>
+// Puts On as a default
+<option selected="">On</option>
+</select>
 </form>
+    // Write details about the developer.
     <h2>About</h2>
       <pre><b>Creator:</b> Rosana Birle.
 <b>Purpose:</b> Assignment.
@@ -33,23 +42,28 @@
 <b>Place:</b> University Of Worcester. </pre>
   </div>
 
+// Creates the header for the page with the button in-line, on top right corner
   <div data-role="header">
 <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-btn-right">Options</a>
     <h1>Number Guess</h1>
   </div>
 
+// Content of the first page
   <div data-role="main" class="ui-content">
     
 
-
+// Difficulty, wrong/right result, hint detailed
 <p id="difficulty"></p>
 <p id="lastResult"></p>
 <p id="hint"></p>
 
 <div class="form">
+  // Creates a blank space to write a number
   <label for="guessField">Guess a number.</label><input type="number" id="guessField">
+  // Enter Guess button in order to send the input to the system
   <button id="guessSubmit">Enter Guess</button>
-  <button id="again">Go again.</button>
+  // Go Again button in order to reset the game
+  <button id="again">Go Again.</button>
 </div>
 
 
@@ -57,12 +71,15 @@
 
   </div>
 
+// Footer of the page with copyright
   <div data-role="footer">
     <h1>Created by Rose</h1>
   </div>
 </div>
 
 </body>
+
+// Send reference to the index.js JavaScript file from js folder
 <script src="js/index.js"></script>
 
 </html>
